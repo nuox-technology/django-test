@@ -3,7 +3,7 @@ FROM python:3.8-slim-buster
 ENV PYTHONBUFFERED=1
 
 
-WORKDIR /automarket
+WORKDIR /django
 
 
 COPY requirements.txt requirements.txt
