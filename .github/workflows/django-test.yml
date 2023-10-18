@@ -25,6 +25,6 @@ jobs:
         python -m pip install
         pip install django typing_extensions sqlparse asgiref
 
-    - name: python-django
+    - name: django-test
       run: |
          python manage.py
