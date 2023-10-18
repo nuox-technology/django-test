@@ -23,7 +23,7 @@ jobs:
     - name: install dependencies
       run:
         python -m pip install
-        pip install django typing_extensions sqlparse asgiref
+        pip install django typing_extensions sqlparse asgiref psycopg
         
     - name: install ssh keys
       # check this thread to understand why its needed:
