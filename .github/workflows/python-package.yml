@@ -20,7 +20,7 @@ jobs:
         python -m pip install
         pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
       - name: Check Syntax 
-        run: pycodestyle --statistics .
+        run: pycodestyle --statistics 
 
       - name: Run Test # running tests
         run: python manage.py test
@@ -45,7 +45,7 @@ jobs:
         python -m pip install
         pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
       - name: Check Syntax # check code formatting
-        run: pycodestyle --statistics .
+        run: pycodestyle --statistics 
 
       - name: Run Test # running tests
         run: python manage.py test
@@ -70,7 +70,7 @@ jobs:
         python -m pip install
         pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
       - name: Check Syntax # check code formatting
-        run: pycodestyle --statistics .
+        run: pycodestyle --statistics 
 
       - name: Run Test # running tests
         run: python manage.py test
