@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - DEV
-  pull:
+  pull_request:
     branches:
       - STAGING
   workflow_dispatch:
