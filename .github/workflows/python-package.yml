@@ -18,7 +18,12 @@ jobs:
     - name: install dependencies
       run:
         python -m pip install
-        pip install django typing_extensions sqlparse asgiref psycopg
+        pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
+      - name: Check Syntax # check code formatting
+        run: pycodestyle --statistics .
+
+      - name: Run Test # running tests
+        run: python manage.py test
 
     - name: python-django
       run: |
@@ -38,7 +43,12 @@ jobs:
     - name: install dependencies
       run:
         python -m pip install
-        pip install django typing_extensions sqlparse asgiref psycopg
+        pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
+      - name: Check Syntax # check code formatting
+        run: pycodestyle --statistics .
+
+      - name: Run Test # running tests
+        run: python manage.py test
 
     - name: python-django
       run: |
@@ -58,7 +68,12 @@ jobs:
     - name: install dependencies
       run:
         python -m pip install
-        pip install django typing_extensions sqlparse asgiref psycopg
+        pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
+      - name: Check Syntax # check code formatting
+        run: pycodestyle --statistics .
+
+      - name: Run Test # running tests
+        run: python manage.py test
 
     - name: python-django
       run: |
