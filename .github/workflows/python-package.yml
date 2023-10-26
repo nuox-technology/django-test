@@ -19,7 +19,7 @@ jobs:
       run:
         python -m pip install
         pip install django typing_extensions sqlparse asgiref psycopg pycodestyle
-      - name: Check Syntax # check code formatting
+      - name: Check Syntax 
         run: pycodestyle --statistics .
 
       - name: Run Test # running tests
