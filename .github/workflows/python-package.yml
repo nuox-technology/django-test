@@ -1,12 +1,6 @@
 name: Python CI/CD PIPELINE branch
 
 on:
-  push:
-    branches:
-      - DEV
-  pull_request:
-    branches:
-      - STAGING
   workflow_dispatch:
   
 
