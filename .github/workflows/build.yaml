@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup phython 3.11.4
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11.4
+      - name: install dependencies
+        run:
+          python -m pip install
+          pip install django typing_extensions sqlparse asgiref psycopg
+      - name: python-django
+        run: |
+          python manage.py
+          
+      - name: Create an issue
+        uses: JasonEtco/create-an-issue@v2.6.0
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          ENVIRONMENT: Dev
+          RUNNUMBER: ${{ github.run_number  }}
+        with:         
+          filename: .github/deployment-approval.md
