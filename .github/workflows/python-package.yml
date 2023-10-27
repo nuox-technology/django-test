@@ -6,7 +6,7 @@
       - dev
   pull_request:
     branches:
-      - "main" 
+      - main 
     paths:
       - ".github/workflows/Python-package.yml"
   
