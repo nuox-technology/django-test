@@ -29,4 +29,4 @@ jobs:
           ENVIRONMENT: Dev
           RUNNUMBER: ${{ github.run_number  }}
         with:         
-          filename: .github/deployment-approval.md
+          filename: django-test/.github/deployment-approval.md
